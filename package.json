@@ -1,0 +1,24 @@
+{
+  "name": "aula02",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Uma API para gerenciar animais de rua disponíveis para adoção, adotantes e informações sobre adoções realizadas. O sistema conecta abrigos, animais e adotantes, proporcionando uma solução completa para o processo de adoção.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "joi": "^17.13.3",
+    "mongoose": "^8.9.4"
+  },
+  "devDependencies": {
+    "eslint": "^9.18.0",
+    "nodemon": "^3.1.9"
+  }
+}

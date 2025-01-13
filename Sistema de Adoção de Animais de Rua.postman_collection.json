@@ -1,0 +1,587 @@
+{
+	"info": {
+		"_postman_id": "9d1be0e2-749f-4f8e-92ae-71b78a12561d",
+		"name": "Sistema de Adoção de Animais de Rua",
+		"description": "Coleção de rotas para gerenciar abrigos na API de adoção de animais.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "14936223"
+	},
+	"item": [
+		{
+			"name": "Abrigos",
+			"item": [
+				{
+					"name": "Listar todos os abrigos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/abrigos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"abrigos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obter informações de um abrigo",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/abrigos/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"abrigos",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "6784771c31a5b0bdee213085"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Criar um novo abrigo",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"nome\": \"Abrigo Amor Animal2\",\n  \"endereco\": \"Rua das Flores, 123, São Paulo - SP\",\n  \"telefone\": \"(11) 99999-9999\",\n  \"email\": \"contato2@amoranimal.org\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/abrigos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"abrigos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Atualizar um abrigo",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"nome\": \"Abrigo Esperança Animal\",\n  \"endereco\": \"Rua das Palmeiras, 456, Campinas - SP\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/abrigos/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"abrigos",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "6784771c31a5b0bdee213085"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Excluir um abrigo",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/abrigos/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"abrigos",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "6784774e31a5b0bdee21308d"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Animais",
+			"item": [
+				{
+					"name": "Listar todos os animais",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/animais",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"animais"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obter informações de um animal",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/animais/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"animais",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "67847c58a1f528da3d54dac7"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Criar um novo animal",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"nome\": \"Rex\",\n  \"especie\": \"cachorro\",\n  \"raca\": \"Labrador\",\n  \"idade\": 3,\n  \"sexo\": \"macho\",\n  \"descricao\": \"Muito dócil e brincalhão.\",\n  \"abrigo_id\": \"67847c42a1f528da3d54dac4\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/animais",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"animais"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Atualizar informações de um animal",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"nome\": \"Rex Atualizado\",\n  \"especie\": \"cachorro\",\n  \"raca\": \"Golden Retriever\",\n  \"idade\": 4,\n  \"sexo\": \"macho\",\n  \"descricao\": \"Cachorro amigável, ideal para crianças.\",\n  \"abrigo_id\": \"6784771c31a5b0bdee213085\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/animais/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"animais",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "678478f27911aac8fe888ed6"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Excluir um animal",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/animais/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"animais",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "<SUBSTITUA_PELO_ID_DO_ANIMAL>"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Adotantes",
+			"item": [
+				{
+					"name": "Listar todos os adotantes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/adotantes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"adotantes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obter informações de um adotante",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/adotantes/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"adotantes",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "678479c58065f8f6db17963a"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Criar um novo adotante",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"nome\": \"João Silva\",\n  \"email\": \"joao@email.com\",\n  \"telefone\": \"(11) 91234-5678\",\n  \"endereco\": \"Rua das Flores, 123, São Paulo - SP\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/adotantes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"adotantes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Atualizar informações de um adotante",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"nome\": \"João Atualizado\",\n  \"email\": \"joao.atualizado@email.com\",\n  \"telefone\": \"(11) 98765-4321\",\n  \"endereco\": \"Rua Nova, 456, Campinas - SP\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/adotantes/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"adotantes",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "678479c58065f8f6db17963a"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Excluir um adotante",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/adotantes/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"adotantes",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "<SUBSTITUA_PELO_ID_DO_ADOTANTE>"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Adoções",
+			"item": [
+				{
+					"name": "Listar todas as adoções",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/adocoes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"adocoes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obter informações de uma adoção",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/adocoes/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"adocoes",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "67847c71a1f528da3d54dacd"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Registrar uma nova adoção",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"adotante_id\": \"67847c5fa1f528da3d54dac9\",\n  \"animal_id\": \"67847c58a1f528da3d54dac7\",\n  \"data_adocao\": \"2025-01-01\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/adocoes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"adocoes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Atualizar informações de uma adoção",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"adotante_id\": \"678479c58065f8f6db17963a\",\n  \"animal_id\": \"678478f27911aac8fe888ed6\",\n  \"data_adocao\": \"2025-01-02\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/adocoes/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"adocoes",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "67847a82dd8edc92b2c5cf75"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Excluir uma adoção",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/adocoes/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"adocoes",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "<SUBSTITUA_PELO_ID_DA_ADOCAO>"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
